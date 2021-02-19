@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebForum", "WebForum\WebForum.csproj", "{B40C4423-5B5D-428B-836B-1B1353CF4C49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebForum.Data", "WebForum.Data\WebForum.Data.csproj", "{B9806B63-9C0B-4B07-BC7F-E649784691CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebForum.Data", "WebForum.Data\WebForum.Data.csproj", "{B9806B63-9C0B-4B07-BC7F-E649784691CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebForum.Service", "WebForum.Service\WebForum.Service.csproj", "{845ED6D7-8462-4842-AD8B-E35F64B87D3E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{B9806B63-9C0B-4B07-BC7F-E649784691CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9806B63-9C0B-4B07-BC7F-E649784691CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9806B63-9C0B-4B07-BC7F-E649784691CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{845ED6D7-8462-4842-AD8B-E35F64B87D3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{845ED6D7-8462-4842-AD8B-E35F64B87D3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{845ED6D7-8462-4842-AD8B-E35F64B87D3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{845ED6D7-8462-4842-AD8B-E35F64B87D3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
