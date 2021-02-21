@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using WebForum.Data;
 using WebForum.Data.Models;
 using WebForum.Models.Post;
@@ -11,10 +14,15 @@ namespace WebForum.Controllers
     public class PostController : Controller
     {
         private readonly IPost _postService;
+        private readonly IForum _forumService;
 
-        public PostController(IPost postService)
+        private static UserManager<ApplicationUser> _userManager;
+
+        public PostController(IPost postService, IForum forumService, UserManager<ApplicationUser> userManager)
         {
             _postService = postService;
+            _forumService = forumService;
+            _userManager = userManager;
         }
 
         public IActionResult Index(int id)
@@ -36,6 +44,49 @@ namespace WebForum.Controllers
             };
 
             return View(model);
+        }
+
+        public IActionResult Create(int forumId)
+        {
+            var forum = _forumService.GetById(forumId);
+
+            var model = new NewPostModel
+            {
+                ForumName = forum.Title,
+                ForumId = forum.Id,
+                ForumImageUrl = forum.ImageUrl,
+                AuthorName = User.Identity.Name
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddPost(NewPostModel model)
+        {
+            var userId = _userManager.GetUserId(User);
+            var user = await _userManager.FindByIdAsync(userId);
+            var post = BuildPost(model, user);
+
+            await _postService.Add(post);
+            
+            // TODO: Implement User Rating Management
+
+            return RedirectToAction("Index", "Post", post.Id);
+        }
+
+        private Post BuildPost(NewPostModel model, ApplicationUser user)
+        {
+            var forum = _forumService.GetById(model.ForumId);
+
+            return new Post
+            {
+                Title = model.Title,
+                Content = model.Content,
+                Created = DateTime.Now,
+                User = user,
+                Forum = forum
+            };
         }
 
         private IEnumerable<PostReplyModel> BuildPostReplies(IEnumerable<PostReply> replies)
