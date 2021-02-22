@@ -46,9 +46,9 @@ namespace WebForum.Controllers
             return View(model);
         }
 
-        public IActionResult Create(int forumId)
+        public IActionResult Create(int id)
         {
-            var forum = _forumService.GetById(forumId);
+            var forum = _forumService.GetById(id);
 
             var model = new NewPostModel
             {
@@ -65,14 +65,14 @@ namespace WebForum.Controllers
         public async Task<IActionResult> AddPost(NewPostModel model)
         {
             var userId = _userManager.GetUserId(User);
-            var user = await _userManager.FindByIdAsync(userId);
+            var user = _userManager.FindByIdAsync(userId).Result;
             var post = BuildPost(model, user);
 
             await _postService.Add(post);
-            
+
             // TODO: Implement User Rating Management
 
-            return RedirectToAction("Index", "Post", post.Id);
+            return RedirectToAction("Index", "Post", new { id = post.Id });
         }
 
         private Post BuildPost(NewPostModel model, ApplicationUser user)
