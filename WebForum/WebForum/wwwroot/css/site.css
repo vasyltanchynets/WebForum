@@ -2,70 +2,302 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: #0366d6;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
+
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
 button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+    font-size: 1rem;
+    line-height: inherit;
 }
 
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    background-color: #EEE;
+    background-image: url("/images/theme/img1.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
+
+/* _Layout */
+.navLogo {
+    background-image: url("/images/logo.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-right: 35px;
+    height: 37px;
+    width: 37px;
+    margin-right: 12px;
+}
+
+/* nav Setting */
+li.dropdown {
+    margin-top: 8px;
+}
+
+/* Latest Posts*/
+h3#latestPosts {
+    padding-top: 15px;
+    font-size: 1.55rem;
+}
+
+/* ------------------------------------------ */
+
+.sectionHeader {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 8px 0 24px 24px;
+}
+
+.sectionHeading {
+    color: white;
+    font-size: 1.3em;
+    font-family: 'Roboto';
+    padding: 16px 0 16px 0;
+    border-bottom: 1px solid #335;
+    margin-bottom: 12px;
+}
+
+.postHeading {
+    color: white;
+    font-size: 1.1em;
+    font-family: 'Roboto';
+    padding: 16px 0 16px 0;
+}
+
+.sectionInfo {
+    height: 400px;
+    background-color: white;
+}
+
+.frontPageSplash {
+    background-image: url("../images/theme/woman-working.png");
+    background-repeat: no-repeat;
+/*    background-position: right;*/
+}
+
+.frontPageLearn {
+    font-family: 'Roboto';
+    padding: 12px 0 0 32px;
+    height: 360px;
+}
+
+.sectionDescription {
+    color: #EEE;
+}
+
+/* Learn, Collaborate... */
+.frontPageHeading {
+    margin-top: 25px;
+    font-size: 40px;
+    /*margin: 16px 0;*/
+}
+
+.frontPageSubHeading {
+    margin-top: 15px;
+    font-size: 25px;
+}
+
+.frontPageTopContainer {
+    padding: 40px 80px 42px 40px;
+    border: 1px solid #999;
+    background-color: #2569D5;
+    font-family: 'Roboto';
+}
+
+/* Search posts */
+.homeSearch {
+    width: 100%;
+    margin-top: 48px;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    border: 0px;
+    height: 55px;
+    font-size: 25px;
+    font-family: 'Roboto Mono';
+    font-weight: bold;
+    transition: ease-in 0.2s;
+}
+
+    .homeSearch:focus {
+        border: none !important;
+        outline: none !important;
+        transition: ease-in 0.2s;
+        color: #03A9F4;
+        background-color: rgba(0, 0, 0, 0.7);
+        box-shadow: 0 5px 4px -6px #000;
+    }
+
+/* Latests posts */
+.frontPageContent {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 16px;
+}
+
+#latestPosts {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin: 4px 0 16px 0;
+}
+
+/* PostPage */
+.postTitle {
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+
+.postSubTitle {
+    color: #888;
+    font-family: 'Roboto Mono';
+    font-size: 0.8em;
+}
+
+.postData {
+    display: inline-block;
+}
+
+.postDate {
+    color: #888;
+    font-family: 'Roboto Mono';
+    font-size: 0.8em;
+}
+
+.postLogo {
+    display: inline-block;
+    border-radius: 3px;
+    margin-right: 20px;
+    height: 40px;
+    width: 40px;
+    background-color: #ddd;
+}
+
+/* Forum Index */
+#forumIndexTable td {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+#forumIndexTable tr:hover {
+    background-color: rgba(0, 116, 238, 1);
+}
+
+.forumData {
+    display: inline-block;
+}
+
+.forumTitle {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.forumSubTitle {
+    color: #888;
+    font-family: 'Roboto Mono';
+    font-size: 0.8em;
+}
+
+.forumDescription {
+    color: #555;
+    font-family: 'Roboto';
+}
+
+.forumLogo {
+    border-radius: 3px;
+    float: left;
+    margin-right: 20px;
+    height: 40px;
+    width: 40px;
+    background-color: #ddd;
+    border: 1px solid #555;
+    background-size: 100%
+}
+
+.forumPostCount {
+    color: #888;
+    font-family: 'Roboto Mono';
+    font-size: 0.9em;
+}
+
+.forumMemberCount {
+    color: #888;
+    font-family: 'Roboto Mono';
+    font-size: 0.9em;
+}
+
+#forumIndexContent {
+    padding-bottom: 60px;
+    background-color: white;
+}
+
+.noPosts {
+    text-align: center;
+    padding-top: 30px;
+    font-family: 'Roboto Mono';
+}
+
+/* Create Post */
+.createPostSection {
+    background-color: #fff;
+    padding: 24px;
+}
+
+
+
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
 }
