@@ -92,6 +92,16 @@ h3#latestPosts {
     font-size: 1.55rem;
 }
 
+/* Forum/Topic */
+.sectionDescription p {
+    margin-left: 12%;
+}
+
+.posTitleForum {
+    width: 101%;
+    margin-bottom: 3px;
+}
+
 /* ------------------------------------------ */
 
 .sectionHeader {
@@ -106,6 +116,7 @@ h3#latestPosts {
     padding: 16px 0 16px 0;
     border-bottom: 1px solid #335;
     margin-bottom: 12px;
+    width: 100%;
 }
 
 .postHeading {
@@ -334,6 +345,13 @@ h3#latestPosts {
         background-color: #00897b !important;
         color: #fff !important;
     }
+
+.btn-forumSearch {
+    background-color: rgba(0, 0, 0, .05);
+    border: #888;
+/*    padding: 0 !important;*/
+    font: inherit;
+}
 
 /* Forum Index */
 #forumIndexTable td {
