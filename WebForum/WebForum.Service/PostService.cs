@@ -53,9 +53,13 @@ namespace WebForum.Service
                 .First();
         }
 
-        public IEnumerable<Post> GetFilteredPosts(string searchQuery)
-        {
-            throw new NotImplementedException();
+        public IEnumerable<Post> GetFilteredPosts(Forum forum, string searchQuery)
+        {           
+            return String.IsNullOrEmpty(searchQuery) 
+                ? forum.Posts 
+                : forum.Posts.Where(post 
+                    => post.Title.Contains(searchQuery) 
+                    || post.Content.Contains(searchQuery));
         }
 
         public IEnumerable<Post> GetLatestPosts(int numPosts)
