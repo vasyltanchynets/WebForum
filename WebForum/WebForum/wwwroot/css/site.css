@@ -134,7 +134,7 @@ h3#latestPosts {
 .frontPageSplash {
     background-image: url("../images/theme/woman-working.png");
     background-repeat: no-repeat;
-/*    background-position: right;*/
+    background-position: center;
 }
 
 .frontPageLearn {
