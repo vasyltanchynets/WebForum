@@ -35,7 +35,7 @@ namespace WebForum.Service
         {
             var user = GetById(id);
             user.ProfileImageUrl = uri.AbsoluteUri;
-            
+
             _context.Update(user);
             await _context.SaveChangesAsync();
         }
