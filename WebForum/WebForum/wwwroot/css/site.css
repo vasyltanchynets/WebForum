@@ -102,8 +102,12 @@ h3#latestPosts {
     margin-bottom: 3px;
 }
 
-/* ------------------------------------------ */
+/* Views/Reply/Create */
+#sizeReply {
+    width: 319%;
+}
 
+/* ------------------------------------------ */
 .sectionHeader {
     background-color: rgba(0, 0, 0, 0.9);
     padding: 8px 0 24px 24px;
