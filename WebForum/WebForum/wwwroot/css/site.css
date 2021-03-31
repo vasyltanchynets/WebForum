@@ -453,11 +453,12 @@ h3#latestPosts {
     background-color: #fff;
 }
 
-#userProfileImage{
+#userProfileImage {
     display: inline-block;
     width: 200px;
     height: 180px;
     background-color: #ddd;
+    background-size: 100%;
 }
 
 #userEmailLabel, #userBioLabel, #userCreatedLabel, #userRating, #userActiveLabel {
@@ -472,6 +473,17 @@ h3#latestPosts {
     color: #2569d5;
     font-family: 'Roboto';
     font-size: 1.7em;
+}
+
+/* User Profile Index */
+.userProfilePic{
+    height: 140px;
+    width: 140px;
+    background-size: 100%;
+}
+
+.fillSquare{
+    background-size: 100%;
 }
 
 .footer {
