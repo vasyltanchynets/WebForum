@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - WebForum</title>
+    <title>@ViewData["Title"] WebForum</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -36,14 +36,14 @@
                             <a href="#" class="dropdown-toggle text-light" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li role="separator" class="divider"></li>
-                                <li class="dropdown-header">Profile</li>
-                                <li><a asp-controller="Profile" asp-action="Detail" asp-route-id="@UserManager.GetUserId(User)">My Profile</a></li>
+                                <li class="dropdown-header signInUser">Profile</li>
+                                <li class="signInUser"><a asp-controller="Profile" asp-action="Detail" asp-route-id="@UserManager.GetUserId(User)">My Profile</a></li>
                                 @if (User.IsInRole("Admin"))
                                 {
                                     <li role="separator" class="divider"></li>
-                                    <li class="dropdown-header">Admin</li>
-                                    <li><a asp-controller="Forum" asp-action="Create">Create Forum</a></li>
-                                    <li><a asp-controller="Profile" asp-action="Index">View Users</a></li>
+                                    <li class="dropdown-header signInUser">Admin</li>
+                                    <li class="signInUser"><a asp-controller="Forum" asp-action="Create">Create Forum</a></li>
+                                    <li class="signInUser"><a asp-controller="Profile" asp-action="Index">View Users</a></li>
                                 }
                             </ul>
                         </li>
@@ -62,7 +62,13 @@
                     @if (SignInManager.IsSignedIn(User))
                     {
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity.Name!</a>
+                            @*<a class="nav-link text-light" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity.Name!</a>*@
+                            <a class="nav-link text-light"
+                               asp-controller="Profile"
+                               asp-action="Detail"
+                               asp-route-id="@UserManager.GetUserId(User)">
+                                @UserManager.GetUserName(User)
+                            </a>
                         </li>
                         <li class="nav-item">
                             <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
