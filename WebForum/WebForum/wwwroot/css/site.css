@@ -12,6 +12,11 @@ a {
     color: #0366d6;
 }
 
+    a:hover {
+        color: #1e1a1a;
+        text-decoration: none;
+    }
+
 .btn-primary {
     color: #fff;
     background-color: #1b6ec2;
@@ -86,27 +91,6 @@ li.dropdown {
     margin-top: 8px;
 }
 
-/* Latest Posts*/
-h3#latestPosts {
-    padding-top: 15px;
-    font-size: 1.55rem;
-}
-
-/* Forum/Topic */
-.sectionDescription p {
-    margin-left: 12%;
-}
-
-.posTitleForum {
-    width: 101%;
-    margin-bottom: 3px;
-}
-
-/* Views/Reply/Create */
-#sizeReply {
-    width: 315%;
-}
-
 /* ------------------------------------------ */
 .sectionHeader {
     background-color: rgba(0, 0, 0, 0.9);
@@ -145,10 +129,6 @@ h3#latestPosts {
     font-family: 'Roboto';
     padding: 12px 0 0 32px;
     height: 360px;
-}
-
-.sectionDescription {
-    color: #EEE;
 }
 
 /* Learn, Collaborate... */
@@ -193,6 +173,19 @@ h3#latestPosts {
         box-shadow: 0 5px 4px -6px #000;
     }
 
+/* Search/Results */
+#searchIndexTable {
+    padding-bottom: 60px;
+    background-color: white;
+}
+
+.noPostsSearchResults {
+    text-align: center;
+    padding-top: 30px;
+    margin-left: 25%;
+    font-family: 'Roboto Mono';
+}
+
 /* Latests posts */
 .frontPageContent {
     background-color: rgba(255, 255, 255, 0.9);
@@ -204,6 +197,11 @@ h3#latestPosts {
     font-weight: bold;
     color: #333;
     margin: 4px 0 16px 0;
+}
+
+h3#latestPosts {
+    padding-top: 15px;
+    font-size: 1.55rem;
 }
 
 /*Forum Topic page*/
@@ -222,6 +220,17 @@ h3#latestPosts {
         width: 60%;
         background-color: #fff;
     }
+
+/* Forum/Topic */
+.sectionDescription {
+    color: #EEE;
+    margin-left: 0%;
+}
+
+.posTitleForum {
+    width: 101%;
+    margin-bottom: 3px;
+}
 
 /* PostPage */
 .postTitle {
@@ -300,9 +309,13 @@ h3#latestPosts {
     margin-right: 20px;
 }
 
-/*.backForumBtn {
-    margin-left: 738px;
-}*/
+.backForumBtn {
+    margin-left: 600px;
+}
+
+.backToPost{
+    margin-left: 80%;
+}
 
 /* Custom Buttons */
 .btn-back {
@@ -387,13 +400,14 @@ h3#latestPosts {
 }
 
 .forumData {
-    display: inline-block;
+    /*display: inline-block;*/
 }
 
 .forumTitle {
     font-family: 'Roboto';
     font-weight: bold;
     font-size: 1.1em;
+    margin-left: 70px;
 }
 
 .forumSubTitle {
@@ -405,6 +419,7 @@ h3#latestPosts {
 .forumDescription {
     color: #555;
     font-family: 'Roboto';
+    margin-left: 4%;
 }
 
 .forumLogo {
@@ -418,21 +433,17 @@ h3#latestPosts {
     background-size: 100%
 }
 
-.forumPostCount {
+.forumPostCount, .forumMemberCount {
     color: #888;
     font-family: 'Roboto Mono';
     font-size: 0.9em;
-}
-
-.forumMemberCount {
-    color: #888;
-    font-family: 'Roboto Mono';
-    font-size: 0.9em;
+    margin-left: 25%;
+    width: 200%;
 }
 
 #forumIndexContent {
-    padding-bottom: 60px;
-    background-color: white;
+    padding-bottom: 16px;
+    background-color: rgba(255, 255, 255, 0.9)
 }
 
 .noPosts {
@@ -441,10 +452,23 @@ h3#latestPosts {
     font-family: 'Roboto Mono';
 }
 
+#createForumSection{
+    background-color: #fff;
+    padding: 24px;
+    width: 100%;
+}
+
 /* Create Post */
 .createPostSection {
     background-color: #fff;
     padding: 24px;
+    width: 100%;
+}
+
+.authorBlock{
+    padding: 18px;
+    border: 1px dashed #00AFCF;
+    margin-bottom: 8px;
 }
 
 /* User profiles */
@@ -477,13 +501,82 @@ h3#latestPosts {
 
 /* User Profile Index */
 .userProfilePic{
-    height: 140px;
+    height: 125px;
     width: 140px;
     background-size: 100%;
 }
 
 .fillSquare{
     background-size: 100%;
+}
+
+/* Replies section */
+.replyContent {
+    background-color: white;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 20%), 0 6px 6px rgb(0 0 0 / 30%);
+}
+
+#postReplyRow{
+    background-color: #3F51B5;
+    padding: 8px;
+}
+
+.replyContentContainer {
+    font-family: 'Roboto';
+    color: #222;
+    padding: 22px;
+    border-left: 1px solid #ddd;
+}
+
+.replyAuthorContainer {
+    padding: 12px;
+    color: #444;
+    font-family: 'Roboto';
+    width: 190px;
+}
+
+.isAdmin{
+    display: inline-block;
+    padding: 2px;
+    background-color: #FFEB3B;
+    color: #000;
+    font-family: 'Roboto Mono';
+}
+
+.smaller{
+    font-size: 0.8em;
+}
+
+#replyDivider{
+    height: 2px;
+    margin-bottom: 12px;
+}
+
+#originalPost{
+    background-color: #fff;
+    padding: 12px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.hasRecentPost {
+    padding: 2px;
+    background-color: #fe552f;
+    color: #fff;
+    text-align: center;
+    border-radius: 1px;
+    width: 30px;
+    margin-left: 70px;
+}
+
+/* Views/Reply/Create */
+#sizeReply {
+    width: 100%;
+}
+
+.signInUser {
+    text-align: center;
+    background-color: #fff;
 }
 
 .footer {
