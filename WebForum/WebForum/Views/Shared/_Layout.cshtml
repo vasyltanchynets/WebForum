@@ -36,12 +36,12 @@
                             <a href="#" class="dropdown-toggle text-light" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li role="separator" class="divider"></li>
-                                <li class="dropdown-header signInUser">Profile</li>
+                                <li class="dropdown-header">Profile</li>
                                 <li class="signInUser"><a asp-controller="Profile" asp-action="Detail" asp-route-id="@UserManager.GetUserId(User)">My Profile</a></li>
                                 @if (User.IsInRole("Admin"))
                                 {
                                     <li role="separator" class="divider"></li>
-                                    <li class="dropdown-header signInUser">Admin</li>
+                                    <li class="dropdown-header">Admin</li>
                                     <li class="signInUser"><a asp-controller="Forum" asp-action="Create">Create Forum</a></li>
                                     <li class="signInUser"><a asp-controller="Profile" asp-action="Index">View Users</a></li>
                                 }
