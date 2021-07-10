@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebForum.Data", "WebForum.D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebForum.Service", "WebForum.Service\WebForum.Service.csproj", "{845ED6D7-8462-4842-AD8B-E35F64B87D3E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebForum.Tests", "WebForum.Tests\WebForum.Tests.csproj", "{CDA70CD3-5667-486E-A0B2-AAC288D25910}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{845ED6D7-8462-4842-AD8B-E35F64B87D3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{845ED6D7-8462-4842-AD8B-E35F64B87D3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{845ED6D7-8462-4842-AD8B-E35F64B87D3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDA70CD3-5667-486E-A0B2-AAC288D25910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDA70CD3-5667-486E-A0B2-AAC288D25910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDA70CD3-5667-486E-A0B2-AAC288D25910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDA70CD3-5667-486E-A0B2-AAC288D25910}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
