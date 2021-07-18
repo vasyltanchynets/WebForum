@@ -39,6 +39,13 @@ namespace WebForum
 
             services.AddTransient<DataSeeder>();
 
+            services.AddAuthentication()
+                    .AddGoogle(options =>
+                    {                                   // were sets private name by myself
+                        options.ClientId = Configuration["Authentication:Google:ClientId"];
+                        options.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
+                    });
+
             services.AddControllersWithViews();
             services.AddRazorPages();            
         }
